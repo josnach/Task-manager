@@ -42,7 +42,7 @@ export interface Project {
     dueDate: Date;
     progress: number;
     tasks: Task[];
-    memnbers: {
+    members: {
         user: User;
         role: "admin" | "member" | "owner" | "viewer";
 
@@ -54,6 +54,11 @@ export interface Project {
 
 export type TaskStatus = "To Do" | "In Progress" | "Done";
 export type TaskPriority = "High" | "Medium" | "Low";
+export enum ProjectMemberRole {
+  MANAGER = "manager",
+  CONTRIBUTOR = "contributor",
+  VIEWER =  "viewer",
+}
 
 
 export interface Subtask {

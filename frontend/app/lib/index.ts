@@ -1,4 +1,4 @@
-import type { ProjectStatus } from "@/types";
+import type { ProjectStatus, TaskStatus } from "@/types";
 
 export const publicRoute = [
     "/sign-in",
@@ -26,3 +26,12 @@ export const getTaskStatusColor = (status: ProjectStatus) => {
     }
   };
   
+  export const getProjectProgress = (tasks: { status: TaskStatus }[]) => {
+    const totalTasks = tasks.length;
+
+    const completedTasks = tasks.filter((task) => task?.status === "Done").length;
+
+    const progress =
+       totalTasks > 0 ? Math.round((completedTasks / totalTasks) * 100) : 0;
+       return progress;
+  };
