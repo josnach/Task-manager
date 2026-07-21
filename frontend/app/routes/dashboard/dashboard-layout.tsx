@@ -13,9 +13,9 @@ export const clientLoader = async () => {
   try {
     const [workspaces] = await Promise.all([fetchData("/workspaces")]);
     return { workspaces };
-
   } catch (error) {
-    console.log(error)
+    console.log(error);
+    return { workspaces: [] };
   }
 };
 

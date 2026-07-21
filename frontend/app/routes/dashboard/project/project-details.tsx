@@ -104,7 +104,6 @@ const ProjectDetails = () => {
             </TabsList>
 
             <div className="flex items-center text-sm">
-              
               <span className="text-muted-foreground">Status:</span>
               <div>
                 <Badge variant="outline" className="bg-background">

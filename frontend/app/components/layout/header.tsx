@@ -4,7 +4,7 @@ import { Button } from "../ui/button";
 import { Bell, PlusCircle, Plus } from "lucide-react";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuGroup, DropdownMenuItem, DropdownMenuLabel, DropdownMenuSeparator, DropdownMenuTrigger } from "../ui/dropdown-menu";
 import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
-import { Link, useLoaderData } from "react-router";
+import { Link, useLoaderData, useLocation, useNavigate } from "react-router";
 import { WorkspaceAvatar } from "../workspace/workspace-avatar";
 
 interface HeaderProps {
@@ -19,10 +19,26 @@ export const Header = ({
     selectedWorkspace,
     onCreateWorkspace,
 }: HeaderProps) => {
+    const navigate = useNavigate();
+     
     const { user, logout } = useAuth();
     const {workspaces} = useLoaderData() as { workspaces: Workspace[]};
-    console.log(workspaces);
+    const isOnWorkspacePage = useLocation().pathname.includes("/workspace");
+    
+    const handleOnClick = (workspace: Workspace) => {
+        onWorkspaceSelected(workspace);
+        const location = window.location
 
+        if(isOnWorkspacePage){
+            navigate(`/workspaces/${workspace._id}`)
+        } else {
+            const basePath = location.pathname
+
+           navigate (`${basePath}?workspaceId=${workspace._id}`);
+        }
+
+        
+    }
 
 
     return(
@@ -56,7 +72,7 @@ export const Header = ({
                         { workspaces.map((ws) => (
                                 <DropdownMenuItem
                                       key={ws._id}
-                                      onClick={() => onWorkspaceSelected(ws)}>
+                                      onClick={() => handleOnClick(ws)}>
 
                                 {ws.color && (
                                     <WorkspaceAvatar color={ws.color} name={ws.name} />
@@ -72,7 +88,7 @@ export const Header = ({
                             <PlusCircle className=" w-4 h-4 mr-2" />
                             Create Workspace 
                         </DropdownMenuItem>
-                    </DropdownMenuGroup>
+                    navigate</DropdownMenuGroup>
                 </DropdownMenuContent>
            </DropdownMenu>
 
