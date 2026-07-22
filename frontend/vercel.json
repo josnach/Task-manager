@@ -2,7 +2,7 @@
     "rewrites": [
       {
         "source": "/(.*)",
-        "destination": "/ndex.html"
+        "destination": "/frontend/app/routes/root/home.tsx"
       }
     ]
   }
