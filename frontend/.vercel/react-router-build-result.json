@@ -1,0 +1,424 @@
+{
+  "buildManifest": {
+    "serverBundles": {
+      "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0": {
+        "id": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+        "file": "build/server/nodejs_eyJydW50aW1lIjoibm9kZWpzIn0/index.js",
+        "config": {
+          "runtime": "nodejs"
+        }
+      }
+    },
+    "routeIdToServerBundleId": {
+      "root": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/root/home": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/auth/sign-in": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/auth/sign-up": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/auth/reset-password": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/auth/forgot-password": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/auth/verify-email": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/workspaces/index": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/workspaces/workspace-details": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/project/project-details": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/task/task-details": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/my-tasks": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/members": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/achieved": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/settings": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/dashboard/workspaces/workspace-invite": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0",
+      "routes/user/profile": "nodejs_eyJydW50aW1lIjoibm9kZWpzIn0"
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "app/root.tsx",
+        "path": "",
+        "config": {
+          "runtime": "nodejs"
+        }
+      },
+      "routes/auth/auth-layout": {
+        "id": "routes/auth/auth-layout",
+        "parentId": "root",
+        "file": "app/routes/auth/auth-layout.tsx",
+        "config": {}
+      },
+      "routes/root/home": {
+        "id": "routes/root/home",
+        "parentId": "routes/auth/auth-layout",
+        "file": "app/routes/root/home.tsx",
+        "index": true,
+        "config": {}
+      },
+      "routes/auth/sign-in": {
+        "id": "routes/auth/sign-in",
+        "parentId": "routes/auth/auth-layout",
+        "file": "app/routes/auth/sign-in.tsx",
+        "path": "sign-in",
+        "config": {}
+      },
+      "routes/auth/sign-up": {
+        "id": "routes/auth/sign-up",
+        "parentId": "routes/auth/auth-layout",
+        "file": "app/routes/auth/sign-up.tsx",
+        "path": "sign-up",
+        "config": {}
+      },
+      "routes/auth/reset-password": {
+        "id": "routes/auth/reset-password",
+        "parentId": "routes/auth/auth-layout",
+        "file": "app/routes/auth/reset-password.tsx",
+        "path": "reset-password",
+        "config": {}
+      },
+      "routes/auth/forgot-password": {
+        "id": "routes/auth/forgot-password",
+        "parentId": "routes/auth/auth-layout",
+        "file": "app/routes/auth/forgot-password.tsx",
+        "path": "forgot-password",
+        "config": {}
+      },
+      "routes/auth/verify-email": {
+        "id": "routes/auth/verify-email",
+        "parentId": "routes/auth/auth-layout",
+        "file": "app/routes/auth/verify-email.tsx",
+        "path": "verify-email",
+        "config": {}
+      },
+      "routes/dashboard/dashboard-layout": {
+        "id": "routes/dashboard/dashboard-layout",
+        "parentId": "root",
+        "file": "app/routes/dashboard/dashboard-layout.tsx",
+        "config": {}
+      },
+      "routes/dashboard/index": {
+        "id": "routes/dashboard/index",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/index.tsx",
+        "path": "dashboard",
+        "config": {}
+      },
+      "routes/dashboard/workspaces/index": {
+        "id": "routes/dashboard/workspaces/index",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/workspaces/index.tsx",
+        "path": "workspaces",
+        "config": {}
+      },
+      "routes/dashboard/workspaces/workspace-details": {
+        "id": "routes/dashboard/workspaces/workspace-details",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/workspaces/workspace-details.tsx",
+        "path": "workspaces/:workspaceId",
+        "config": {}
+      },
+      "routes/dashboard/project/project-details": {
+        "id": "routes/dashboard/project/project-details",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/project/project-details.tsx",
+        "path": "workspaces/:workspaceId/projects/:projectId",
+        "config": {}
+      },
+      "routes/dashboard/task/task-details": {
+        "id": "routes/dashboard/task/task-details",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/task/task-details.tsx",
+        "path": "workspaces/:workspaceId/projects/:projectId/tasks/:taskId",
+        "config": {}
+      },
+      "routes/dashboard/my-tasks": {
+        "id": "routes/dashboard/my-tasks",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/my-tasks.tsx",
+        "path": "my-tasks",
+        "config": {}
+      },
+      "routes/dashboard/members": {
+        "id": "routes/dashboard/members",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/members.tsx",
+        "path": "members",
+        "config": {}
+      },
+      "routes/dashboard/achieved": {
+        "id": "routes/dashboard/achieved",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/achieved.tsx",
+        "path": "achieved",
+        "config": {}
+      },
+      "routes/dashboard/settings": {
+        "id": "routes/dashboard/settings",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "app/routes/dashboard/settings.tsx",
+        "path": "settings",
+        "config": {}
+      },
+      "routes/dashboard/workspaces/workspace-invite": {
+        "id": "routes/dashboard/workspaces/workspace-invite",
+        "parentId": "root",
+        "file": "app/routes/dashboard/workspaces/workspace-invite.tsx",
+        "path": "workspace-invite/:workspaceId",
+        "config": {}
+      },
+      "routes/user/user-layout": {
+        "id": "routes/user/user-layout",
+        "parentId": "root",
+        "file": "app/routes/user/user-layout.tsx",
+        "config": {}
+      },
+      "routes/user/profile": {
+        "id": "routes/user/profile",
+        "parentId": "routes/user/user-layout",
+        "file": "app/routes/user/profile.tsx",
+        "path": "user/profile",
+        "config": {}
+      }
+    }
+  },
+  "reactRouterConfig": {
+    "appDirectory": "C:/Users/User/OneDrive/Desktop/Project-manage1/frontend/app",
+    "basename": "/",
+    "buildDirectory": "C:/Users/User/OneDrive/Desktop/Project-manage1/frontend/build",
+    "future": {
+      "unstable_optimizeDeps": false,
+      "v8_passThroughRequests": true,
+      "v8_trailingSlashAwareDataRequests": true,
+      "unstable_previewServerPrerendering": false,
+      "v8_middleware": true,
+      "v8_splitRouteModules": true,
+      "v8_viteEnvironmentApi": true
+    },
+    "routes": {
+      "root": {
+        "id": "root",
+        "file": "root.tsx",
+        "path": ""
+      },
+      "routes/auth/auth-layout": {
+        "id": "routes/auth/auth-layout",
+        "parentId": "root",
+        "file": "routes/auth/auth-layout.tsx"
+      },
+      "routes/root/home": {
+        "id": "routes/root/home",
+        "parentId": "routes/auth/auth-layout",
+        "file": "routes/root/home.tsx",
+        "index": true
+      },
+      "routes/auth/sign-in": {
+        "id": "routes/auth/sign-in",
+        "parentId": "routes/auth/auth-layout",
+        "file": "routes/auth/sign-in.tsx",
+        "path": "sign-in"
+      },
+      "routes/auth/sign-up": {
+        "id": "routes/auth/sign-up",
+        "parentId": "routes/auth/auth-layout",
+        "file": "routes/auth/sign-up.tsx",
+        "path": "sign-up"
+      },
+      "routes/auth/reset-password": {
+        "id": "routes/auth/reset-password",
+        "parentId": "routes/auth/auth-layout",
+        "file": "routes/auth/reset-password.tsx",
+        "path": "reset-password"
+      },
+      "routes/auth/forgot-password": {
+        "id": "routes/auth/forgot-password",
+        "parentId": "routes/auth/auth-layout",
+        "file": "routes/auth/forgot-password.tsx",
+        "path": "forgot-password"
+      },
+      "routes/auth/verify-email": {
+        "id": "routes/auth/verify-email",
+        "parentId": "routes/auth/auth-layout",
+        "file": "routes/auth/verify-email.tsx",
+        "path": "verify-email"
+      },
+      "routes/dashboard/dashboard-layout": {
+        "id": "routes/dashboard/dashboard-layout",
+        "parentId": "root",
+        "file": "routes/dashboard/dashboard-layout.tsx"
+      },
+      "routes/dashboard/index": {
+        "id": "routes/dashboard/index",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/index.tsx",
+        "path": "dashboard"
+      },
+      "routes/dashboard/workspaces/index": {
+        "id": "routes/dashboard/workspaces/index",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/workspaces/index.tsx",
+        "path": "workspaces"
+      },
+      "routes/dashboard/workspaces/workspace-details": {
+        "id": "routes/dashboard/workspaces/workspace-details",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/workspaces/workspace-details.tsx",
+        "path": "workspaces/:workspaceId"
+      },
+      "routes/dashboard/project/project-details": {
+        "id": "routes/dashboard/project/project-details",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/project/project-details.tsx",
+        "path": "workspaces/:workspaceId/projects/:projectId"
+      },
+      "routes/dashboard/task/task-details": {
+        "id": "routes/dashboard/task/task-details",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/task/task-details.tsx",
+        "path": "workspaces/:workspaceId/projects/:projectId/tasks/:taskId"
+      },
+      "routes/dashboard/my-tasks": {
+        "id": "routes/dashboard/my-tasks",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/my-tasks.tsx",
+        "path": "my-tasks"
+      },
+      "routes/dashboard/members": {
+        "id": "routes/dashboard/members",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/members.tsx",
+        "path": "members"
+      },
+      "routes/dashboard/achieved": {
+        "id": "routes/dashboard/achieved",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/achieved.tsx",
+        "path": "achieved"
+      },
+      "routes/dashboard/settings": {
+        "id": "routes/dashboard/settings",
+        "parentId": "routes/dashboard/dashboard-layout",
+        "file": "routes/dashboard/settings.tsx",
+        "path": "settings"
+      },
+      "routes/dashboard/workspaces/workspace-invite": {
+        "id": "routes/dashboard/workspaces/workspace-invite",
+        "parentId": "root",
+        "file": "routes/dashboard/workspaces/workspace-invite.tsx",
+        "path": "workspace-invite/:workspaceId"
+      },
+      "routes/user/user-layout": {
+        "id": "routes/user/user-layout",
+        "parentId": "root",
+        "file": "routes/user/user-layout.tsx"
+      },
+      "routes/user/profile": {
+        "id": "routes/user/profile",
+        "parentId": "routes/user/user-layout",
+        "file": "routes/user/profile.tsx",
+        "path": "user/profile"
+      }
+    },
+    "routeDiscovery": {
+      "mode": "lazy",
+      "manifestPath": "/__manifest"
+    },
+    "serverBuildFile": "index.js",
+    "serverModuleFormat": "esm",
+    "ssr": true,
+    "subResourceIntegrity": false,
+    "allowedActionOrigins": false,
+    "unstable_routeConfig": [
+      {
+        "id": "root",
+        "path": "",
+        "file": "root.tsx",
+        "children": [
+          {
+            "file": "routes/auth/auth-layout.tsx",
+            "children": [
+              {
+                "file": "routes/root/home.tsx",
+                "index": true
+              },
+              {
+                "file": "routes/auth/sign-in.tsx",
+                "path": "sign-in"
+              },
+              {
+                "file": "routes/auth/sign-up.tsx",
+                "path": "sign-up"
+              },
+              {
+                "file": "routes/auth/reset-password.tsx",
+                "path": "reset-password"
+              },
+              {
+                "file": "routes/auth/forgot-password.tsx",
+                "path": "forgot-password"
+              },
+              {
+                "file": "routes/auth/verify-email.tsx",
+                "path": "verify-email"
+              }
+            ]
+          },
+          {
+            "file": "routes/dashboard/dashboard-layout.tsx",
+            "children": [
+              {
+                "file": "routes/dashboard/index.tsx",
+                "path": "dashboard"
+              },
+              {
+                "file": "routes/dashboard/workspaces/index.tsx",
+                "path": "workspaces"
+              },
+              {
+                "file": "routes/dashboard/workspaces/workspace-details.tsx",
+                "path": "workspaces/:workspaceId"
+              },
+              {
+                "file": "routes/dashboard/project/project-details.tsx",
+                "path": "workspaces/:workspaceId/projects/:projectId"
+              },
+              {
+                "file": "routes/dashboard/task/task-details.tsx",
+                "path": "workspaces/:workspaceId/projects/:projectId/tasks/:taskId"
+              },
+              {
+                "file": "routes/dashboard/my-tasks.tsx",
+                "path": "my-tasks"
+              },
+              {
+                "file": "routes/dashboard/members.tsx",
+                "path": "members"
+              },
+              {
+                "file": "routes/dashboard/achieved.tsx",
+                "path": "achieved"
+              },
+              {
+                "file": "routes/dashboard/settings.tsx",
+                "path": "settings"
+              }
+            ]
+          },
+          {
+            "file": "routes/dashboard/workspaces/workspace-invite.tsx",
+            "path": "workspace-invite/:workspaceId"
+          },
+          {
+            "file": "routes/user/user-layout.tsx",
+            "children": [
+              {
+                "file": "routes/user/profile.tsx",
+                "path": "user/profile"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "viteConfig": {
+    "build": {
+      "assetsDir": "assets"
+    }
+  }
+}
